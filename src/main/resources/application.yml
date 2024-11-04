@@ -3,13 +3,14 @@ spring:
    name: testactuator
 management:
   endpoints:
-    enabled-by-default: false
+    access:
+      default: NONE
     web:
       exposure:
         include: "*"
   endpoint:
     health:
-      enabled: true
+      access: READ_ONLY
   cors:
     allowed-origins: "*"
     allowed-methods: GET
